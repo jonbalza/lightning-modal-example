@@ -26,9 +26,9 @@
         <c:Modal_Basic isOpen="{!v.isBasicModalOpen}" onclose="{!c.closeBasicModal}" title="Basic Modal">
             <p>This is a basic modal.</p>
         </c:Modal_Basic>
-        <c:Modal_Animation isOpen="{!v.isAnimatedModalOpen}" onclose="{!c.closeAnimatedModal}" title="Animated Modal">
+        <c:Modal_Animated isOpen="{!v.isAnimatedModalOpen}" onclose="{!c.closeAnimatedModal}" title="Animated Modal">
             <p>This is an animated modal.</p>
-        </c:Modal_Animation>
+        </c:Modal_Animated>
         <c:Modal_Final isOpen="{!v.isFinalModalOpen}" onclose="{!c.closeFinalModal}" title="Final Modal">
             <p>This is the final modal.</p>
         </c:Modal_Final>
