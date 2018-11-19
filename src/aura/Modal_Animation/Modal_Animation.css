@@ -1,0 +1,56 @@
+/**
+ * Created by jonbalza on 11/17/18.
+ */
+.THIS {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.THIS .modal_backdrop {
+    background: rgba(220,220,220,.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+
+    transition: opacity .25s linear;
+}
+.THIS.is-open .modal_backdrop {
+    opacity: 1;
+}
+.THIS .modal {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -5px rgba(0,0,0,.1);
+    position: relative;
+    margin: auto;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform .5s cubic-bezier(0.19, 1, 0.22, 1), opacity .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.THIS.is-open .modal {
+    transform: translateY(0px);
+    opacity: 1;
+}
+.THIS .modal_header {
+    background: aliceblue;
+    padding: 15px 40px 15px 20px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+.THIS .modal_body {
+    padding: 20px;
+}
+.THIS .modal_close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}

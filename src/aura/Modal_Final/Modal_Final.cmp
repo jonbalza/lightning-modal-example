@@ -1,0 +1,29 @@
+<!--
+ - Created by jonbalza on 11/16/18.
+ -->
+
+<aura:component description="Modal_Final">
+    <aura:attribute name="title" type="String" />
+
+    <aura:attribute name="isOpen" type="Boolean" default="false" />
+    <aura:attribute name="openState" type="String" default="closed" />
+    <aura:attribute name="openDelay" type="Integer" default="500" />
+
+    <aura:handler name="change" value="{!v.isOpen}" action="{!c.handleIsOpenToggle}" />
+    <aura:registerEvent name="onclose" type="c:Modal_Event" />
+
+    <aura:if isTrue="{!v.openState != 'closed'}">
+        <div class="{!'modal_container slds-align_absolute-center ' + v.class + ' modal-' + v.openState}">
+            <div class="modal_backdrop"></div>
+            <article class="modal">
+                <header class="modal_header">
+                    <h1>{!v.title}</h1>
+                    <a class="modal_close" onclick="{!c.closeModal}"><lightning:icon iconName="utility:close" size="xx-small" alternativeText="Close Modal" /></a>
+                </header>
+                <div class="modal_body">
+                    {!v.body}
+                </div>
+            </article>
+        </div>
+    </aura:if>
+</aura:component>
