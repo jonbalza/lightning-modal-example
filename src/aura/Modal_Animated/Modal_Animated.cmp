@@ -2,7 +2,7 @@
  - Created by jonbalza on 11/16/18.
  -->
 
-<aura:component description="Modal_Animation">
+<aura:component description="Modal_Animated">
     <aura:attribute name="isOpen" type="Boolean" default="false" />
     <aura:attribute name="openClass" type="String" default="" />
     <aura:attribute name="title" type="String" />

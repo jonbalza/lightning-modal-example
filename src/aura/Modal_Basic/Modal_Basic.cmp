@@ -13,11 +13,11 @@
             <div class="modal_backdrop"></div>
             <article class="modal">
                 <header class="modal_header">
-                    <h1>Basic Modal</h1>
+                    <h1>{!v.title}</h1>
                     <a class="modal_close" onclick="{!c.closeModal}"><lightning:icon iconName="utility:close" size="xx-small" alternativeText="Close Modal" /></a>
                 </header>
                 <div class="modal_body">
-                    <p>This is a basic modal.</p>
+                    {!v.body}
                 </div>
             </article>
         </div>

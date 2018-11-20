@@ -3,8 +3,8 @@
  */
 ({
     handleIsOpenToggle: function(component, event, helper) {
-        let isOpen = component.get('v.isOpen');
-        let openDelay = component.get('v.openDelay');
+        const isOpen = component.get('v.isOpen');
+        const openDelay = component.get('v.openDelay');
         if (isOpen) {
             component.set('v.openState', 'opening');
             setTimeout($A.getCallback(function() {
